@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'customers',
     'orders',
     'robots',
+
     'rest_framework',
 ]
 
@@ -86,8 +88,8 @@ DATABASES = {
         'NAME': os.getenv('DATABASE_NAME'),
         'USER': os.getenv('DATABASE_USER'),
         'PASSWORD': os.getenv('DATABASE_PASSWORD'),
-        # 'HOST': os.getenv('DATABASE_HOST'),
-        # 'PORT': int(os.getenv('DATABASE_PORT'))
+        'HOST': os.getenv('DATABASE_HOST'),
+        'PORT': int(os.getenv('DATABASE_PORT'))
     }
 }
 
@@ -131,3 +133,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
