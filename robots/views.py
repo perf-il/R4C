@@ -13,6 +13,11 @@ from robots.services import report_save_excel
 class RobotCreateAPIView(generics.CreateAPIView):
     serializer_class = RobotSerializer
 
+    def perform_create(self, serializer):
+        new_robot = serializer.save()
+        new_robot.serial = f'{new_robot.model}-{new_robot.version}'
+        new_robot.save()
+
 
 class RobotListAPIView(generics.ListAPIView):
     serializer_class = RobotSerializer
