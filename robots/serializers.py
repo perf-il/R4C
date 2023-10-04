@@ -28,4 +28,5 @@ class RobotSerializer(serializers.ModelSerializer):
         return data
 
     def get_serial(self, instance):
-        return f'{instance.model}-{instance.version}'
+        self.serial = f'{instance.model}-{instance.version}'
+        return self.serial
