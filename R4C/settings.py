@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'robots',
 
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
