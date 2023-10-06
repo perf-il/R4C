@@ -108,7 +108,7 @@ class RobotsTest(APITestCase):
 
         self.assertEqual(
             *response.json()['non_field_errors'],
-            f"Модель должна быть выражена двух-символьной последовательностью(например R2)"
+            "Модель должна быть выражена двух-символьной последовательностью(например R2)"
         )
 
         response = self.client.post(
@@ -123,7 +123,7 @@ class RobotsTest(APITestCase):
 
         self.assertEqual(
             *response.json()['non_field_errors'],
-            f"Версия должна быть выражена двух-символьной последовательностью(например 11)"
+            "Версия должна быть выражена двух-символьной последовательностью(например 11)"
         )
 
         response = self.client.post(
@@ -138,7 +138,7 @@ class RobotsTest(APITestCase):
 
         self.assertEqual(
             *response.json()['non_field_errors'],
-            f"Нельзя указать будущее время"
+            "Нельзя указать будущее время"
         )
 
         self.assertFalse(

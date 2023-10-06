@@ -86,7 +86,7 @@ class CustomersTest(APITestCase):
 
         self.assertEqual(
             *response.json()['non_field_errors'],
-            f'Enter a valid email address.'
+            'Enter a valid email address.'
         )
 
         response = self.client.post(
@@ -101,5 +101,5 @@ class CustomersTest(APITestCase):
 
         self.assertEqual(
             *response.json()['non_field_errors'],
-            f'Адрес уже зарегистрирован'
+            'Адрес уже зарегистрирован'
         )

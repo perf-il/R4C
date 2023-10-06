@@ -10,5 +10,3 @@ def send_mail_to_customers(subject, body, customers_list):
         from_email=settings.EMAIL_HOST_USER,
         recipient_list=customers_list
     )
-
-

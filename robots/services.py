@@ -28,7 +28,8 @@ def report_save_excel(days=7):
             ws.write(0, 1, 'Версия', style0)
             ws.write(0, 2, "Количество за неделю", style0)
 
-            for i, model in enumerate(sorted_robots.values('model', 'version').annotate(dcount=Count('version')).order_by()):
+            for i, model in enumerate(
+                    sorted_robots.values('model', 'version').annotate(dcount=Count('version')).order_by()):
                 ws.write(i + 1, 0, model['model'])
                 ws.write(i + 1, 1, model['version'])
                 ws.write(i + 1, 2, model['dcount'])

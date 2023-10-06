@@ -41,4 +41,3 @@ class OrdersTest(APITestCase):
                     'in_stock': False
                 }
             )
-
